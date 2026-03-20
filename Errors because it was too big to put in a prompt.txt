@@ -1,26 +1,51 @@
-calebdebebe32alt@penguin:~/minecraft/PrismLauncher$ sudo apt install -y zlib1g-dev libssl-dev
+calebdebebe32alt@penguin:~/minecraft/PrismLauncher$ sudo apt install extra-cmake-modules
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
-libssl-dev is already the newest version (3.0.18-1~deb12u2).
+Suggested packages:
+  qt5-qmake qtbase5-dev
 The following NEW packages will be installed:
-  zlib1g-dev
+  extra-cmake-modules
 0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
-Need to get 913 kB of archives.
-After this operation, 1,338 kB of additional disk space will be used.
-Get:1 https://deb.debian.org/debian bookworm/main arm64 zlib1g-dev arm64 1:1.2.13.dfsg-1 [913 kB]
-Fetched 913 kB in 1s (1,771 kB/s)  
-Selecting previously unselected package zlib1g-dev:arm64.
-(Reading database ... 62008 files and directories currently installed.)
-Preparing to unpack .../zlib1g-dev_1%3a1.2.13.dfsg-1_arm64.deb ...
-Unpacking zlib1g-dev:arm64 (1:1.2.13.dfsg-1) ...
-Setting up zlib1g-dev:arm64 (1:1.2.13.dfsg-1) ...
+Need to get 198 kB of archives.
+After this operation, 841 kB of additional disk space will be used.
+Get:1 https://deb.debian.org/debian bookworm/main arm64 extra-cmake-modules arm64 5.103.0-1 [198 kB]
+Fetched 198 kB in 1s (385 kB/s)             
+Selecting previously unselected package extra-cmake-modules.
+(Reading database ... 62040 files and directories currently installed.)
+Preparing to unpack .../extra-cmake-modules_5.103.0-1_arm64.deb ...
+Unpacking extra-cmake-modules (5.103.0-1) ...
+Setting up extra-cmake-modules (5.103.0-1) ...
 Processing triggers for man-db (2.11.2-2) ...
+calebdebebe32alt@penguin:~/minecraft/PrismLauncher$ sudo apt install ninja-build
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  ninja-build
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 126 kB of archives.
+After this operation, 446 kB of additional disk space will be used.
+Get:1 https://deb.debian.org/debian bookworm/main arm64 ninja-build arm64 1.11.1-2~deb12u1 [126 kB]
+Fetched 126 kB in 0s (423 kB/s) 
+Selecting previously unselected package ninja-build.
+(Reading database ... 62178 files and directories currently installed.)
+Preparing to unpack .../ninja-build_1.11.1-2~deb12u1_arm64.deb ...
+Unpacking ninja-build (1.11.1-2~deb12u1) ...
+Setting up ninja-build (1.11.1-2~deb12u1) ...
+Processing triggers for man-db (2.11.2-2) ...
+calebdebebe32alt@penguin:~/minecraft/PrismLauncher$ sudo apt install ninja-build
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+ninja-build is already the newest version (1.11.1-2~deb12u1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 calebdebebe32alt@penguin:~/minecraft/PrismLauncher$ cd ~/minecraft/PrismLauncher
 
 rm -rf build
 
-cmake -B build
+cmake -B build -G Ninja
+cmake --build build
 -- The C compiler identification is GNU 12.2.0
 -- The CXX compiler identification is GNU 12.2.0
 -- Detecting C compiler ABI info
@@ -33,20 +58,47 @@ cmake -B build
 -- Check for working CXX compiler: /usr/bin/c++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
-CMake Error at CMakeLists.txt:157 (find_package):
-  Could not find a package configuration file provided by "ECM" with any of
-  the following names:
+-- Git commit: 2514c8b21f75a21124ca0317a8d0b73cf5a62427
+-- Git tag: -128-NOTFOUND
+-- Git refspec: refs/heads/develop
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Performing Test HAVE_STDATOMIC
+-- Performing Test HAVE_STDATOMIC - Success
+-- Found WrapAtomic: TRUE  
+-- Found OpenGL: /usr/lib/aarch64-linux-gnu/libOpenGL.so   
+-- Found WrapOpenGL: TRUE  
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Found WrapVulkanHeaders: /usr/include  
+-- Could NOT find Qt6NetworkAuth (missing: Qt6NetworkAuth_DIR)
+CMake Error at CMakeLists.txt:286 (find_package):
+  Found package configuration file:
 
-    ECMConfig.cmake
-    ecm-config.cmake
+    /usr/lib/aarch64-linux-gnu/cmake/Qt6/Qt6Config.cmake
 
-  Add the installation prefix of "ECM" to CMAKE_PREFIX_PATH or set "ECM_DIR"
-  to a directory containing one of the above files.  If "ECM" provides a
-  separate development package or SDK, be sure it has been installed.
+  but it set Qt6_FOUND to FALSE so package "Qt6" is considered to be NOT
+  FOUND.  Reason given by package:
+
+  Failed to find required Qt component "NetworkAuth".
+
+  Expected Config file at
+  "/usr/lib/aarch64-linux-gnu/cmake/Qt6NetworkAuth/Qt6NetworkAuthConfig.cmake"
+  does NOT exist
+
+  
+
+  Configuring with --debug-find-pkg=Qt6NetworkAuth might reveal details why
+  the package was not found.
+
+  Configuring with -DQT_DEBUG_FIND_PACKAGE=ON will print the values of some
+  of the path variables that find_package uses to try and find the package.
+
 
 
 -- Configuring incomplete, errors occurred!
 See also "/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeOutput.log".
+ninja: error: loading 'build.ninja': No such file or directory
 calebdebebe32alt@penguin:~/minecraft/PrismLauncher$ cat /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeOutput.log
 The system is: Linux - 6.6.99-09070-g0245f6566c20 - aarch64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
@@ -76,12 +128,9 @@ Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" p
 The CXX compiler identification is GNU, found in "/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/3.25.1/CompilerIdCXX/a.out"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-dh6Ww7
+Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-Jbmjq6
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_840c8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_840c8.dir/build.make CMakeFiles/cmTC_840c8.dir/build
-gmake[1]: Entering directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-dh6Ww7'
-Building C object CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc   -v -o CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c
+Run Build Command(s):/usr/bin/ninja cmTC_1cdfe && [1/2] Building C object CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.o
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 Target: aarch64-linux-gnu
@@ -89,8 +138,8 @@ Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14+deb12u1
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
 gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_840c8.dir/'
- /usr/lib/gcc/aarch64-linux-gnu/12/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_840c8.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/cc9iy3Ud.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_1cdfe.dir/'
+ /usr/lib/gcc/aarch64-linux-gnu/12/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1cdfe.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccz0s0BH.s
 GNU C17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)
         compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.2.0, MPC version 1.3.1, isl version isl-0.25-GMP
 
@@ -110,15 +159,13 @@ GNU C17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 353d9f3bda0709922bce3bd32cc6f6a4
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_840c8.dir/'
- as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o /tmp/cc9iy3Ud.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_1cdfe.dir/'
+ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.o /tmp/ccz0s0BH.s
 GNU assembler version 2.40 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.'
-Linking C executable cmTC_840c8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_840c8.dir/link.txt --verbose=1
-/usr/bin/cc  -v CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o -o cmTC_840c8 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.'
+[2/2] Linking C executable cmTC_1cdfe
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper
@@ -129,10 +176,9 @@ Supported LTO compression algorithms: zlib zstd
 gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) 
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_840c8' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_840c8.'
- /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccm802LO.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_840c8 /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_840c8' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_840c8.'
-gmake[1]: Leaving directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-dh6Ww7'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1cdfe' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_1cdfe.'
+ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbp2W9o.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_1cdfe /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1cdfe' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_1cdfe.'
 
 
 
@@ -153,12 +199,9 @@ Parsed C implicit include dir info from above output: rv=done
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-dh6Ww7]
+  ignore line: [Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-Jbmjq6]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_840c8/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_840c8.dir/build.make CMakeFiles/cmTC_840c8.dir/build]
-  ignore line: [gmake[1]: Entering directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-dh6Ww7']
-  ignore line: [Building C object CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c]
+  ignore line: [Run Build Command(s):/usr/bin/ninja cmTC_1cdfe && [1/2] Building C object CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.o]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [Target: aarch64-linux-gnu]
@@ -166,8 +209,8 @@ Parsed C implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib zstd]
   ignore line: [gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_840c8.dir/']
-  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_840c8.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/cc9iy3Ud.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_1cdfe.dir/']
+  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1cdfe.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccz0s0BH.s]
   ignore line: [GNU C17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)]
   ignore line: [        compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.2.0  MPC version 1.3.1  isl version isl-0.25-GMP]
   ignore line: []
@@ -187,15 +230,13 @@ Parsed C implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 353d9f3bda0709922bce3bd32cc6f6a4]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_840c8.dir/']
-  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o /tmp/cc9iy3Ud.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_1cdfe.dir/']
+  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.o /tmp/ccz0s0BH.s]
   ignore line: [GNU assembler version 2.40 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.']
-  ignore line: [Linking C executable cmTC_840c8]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_840c8.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o -o cmTC_840c8 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.']
+  ignore line: [[2/2] Linking C executable cmTC_1cdfe]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper]
@@ -206,13 +247,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_840c8' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_840c8.']
-  link line: [ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccm802LO.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_840c8 /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1cdfe' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_1cdfe.']
+  link line: [ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccbp2W9o.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_1cdfe /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccm802LO.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccbp2W9o.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -230,7 +271,7 @@ Parsed C implicit link information from above output:
     arg [--fix-cortex-a53-843419] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_840c8] ==> ignore
+    arg [cmTC_1cdfe] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o]
@@ -242,7 +283,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../..]
-    arg [CMakeFiles/cmTC_840c8.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_1cdfe.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -274,12 +315,9 @@ Parsed C implicit link information from above output:
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-g2s8f4
+Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-T3vxJC
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0384b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0384b.dir/build.make CMakeFiles/cmTC_0384b.dir/build
-gmake[1]: Entering directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-g2s8f4'
-Building CXX object CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++   -v -o CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp
+Run Build Command(s):/usr/bin/ninja cmTC_e51f4 && [1/2] Building CXX object CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.o
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 Target: aarch64-linux-gnu
@@ -287,8 +325,8 @@ Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14+deb12u1
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
 gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_0384b.dir/'
- /usr/lib/gcc/aarch64-linux-gnu/12/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0384b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccZwbXQY.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_e51f4.dir/'
+ /usr/lib/gcc/aarch64-linux-gnu/12/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_e51f4.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccpcQkRu.s
 GNU C++17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)
         compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.2.0, MPC version 1.3.1, isl version isl-0.25-GMP
 
@@ -312,15 +350,13 @@ GNU C++17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: d9103456b43be91192fb7c39dd0b8040
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_0384b.dir/'
- as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccZwbXQY.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_e51f4.dir/'
+ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccpcQkRu.s
 GNU assembler version 2.40 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.'
-Linking CXX executable cmTC_0384b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0384b.dir/link.txt --verbose=1
-/usr/bin/c++  -v CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0384b 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.'
+[2/2] Linking CXX executable cmTC_e51f4
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper
@@ -331,10 +367,9 @@ Supported LTO compression algorithms: zlib zstd
 gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) 
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0384b' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_0384b.'
- /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/cchbHq8I.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_0384b /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0384b' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_0384b.'
-gmake[1]: Leaving directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-g2s8f4'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e51f4' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_e51f4.'
+ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccT386ao.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_e51f4 /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e51f4' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_e51f4.'
 
 
 
@@ -361,12 +396,9 @@ Parsed CXX implicit include dir info from above output: rv=done
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-g2s8f4]
+  ignore line: [Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-T3vxJC]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_0384b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0384b.dir/build.make CMakeFiles/cmTC_0384b.dir/build]
-  ignore line: [gmake[1]: Entering directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-g2s8f4']
-  ignore line: [Building CXX object CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Run Build Command(s):/usr/bin/ninja cmTC_e51f4 && [1/2] Building CXX object CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.o]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [Target: aarch64-linux-gnu]
@@ -374,8 +406,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib zstd]
   ignore line: [gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_0384b.dir/']
-  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0384b.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccZwbXQY.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_e51f4.dir/']
+  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_e51f4.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccpcQkRu.s]
   ignore line: [GNU C++17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)]
   ignore line: [        compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.2.0  MPC version 1.3.1  isl version isl-0.25-GMP]
   ignore line: []
@@ -399,15 +431,13 @@ Parsed CXX implicit link information from above output:
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: d9103456b43be91192fb7c39dd0b8040]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_0384b.dir/']
-  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccZwbXQY.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_e51f4.dir/']
+  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccpcQkRu.s]
   ignore line: [GNU assembler version 2.40 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.']
-  ignore line: [Linking CXX executable cmTC_0384b]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0384b.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0384b ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.']
+  ignore line: [[2/2] Linking CXX executable cmTC_e51f4]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper]
@@ -418,13 +448,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0384b' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_0384b.']
-  link line: [ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/cchbHq8I.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_0384b /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e51f4' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_e51f4.']
+  link line: [ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccT386ao.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_e51f4 /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cchbHq8I.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccT386ao.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -442,7 +472,7 @@ Parsed CXX implicit link information from above output:
     arg [--fix-cortex-a53-843419] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_0384b] ==> ignore
+    arg [cmTC_e51f4] ==> ignore
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o]
     arg [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o]
@@ -454,7 +484,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../..]
-    arg [CMakeFiles/cmTC_0384b.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_e51f4.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -479,3 +509,67 @@ Parsed CXX implicit link information from above output:
   implicit objs: [/usr/lib/aarch64-linux-gnu/Scrt1.o;/usr/lib/aarch64-linux-gnu/crti.o;/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o;/usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o;/usr/lib/aarch64-linux-gnu/crtn.o]
   implicit dirs: [/usr/lib/gcc/aarch64-linux-gnu/12;/usr/lib/aarch64-linux-gnu;/usr/lib;/lib/aarch64-linux-gnu;/lib]
   implicit fwks: []
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-d1Nh7c
+
+Run Build Command(s):/usr/bin/ninja cmTC_ea240 && [1/2] Building C object CMakeFiles/cmTC_ea240.dir/src.c.o
+[2/2] Linking C executable cmTC_ea240
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Performing C++ SOURCE FILE Test HAVE_STDATOMIC succeeded with the following output:
+Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-vbMZVj
+
+Run Build Command(s):/usr/bin/ninja cmTC_98de7 && [1/2] Building CXX object CMakeFiles/cmTC_98de7.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_98de7
+
+
+Source file was:
+#include <atomic>
+#include <cstdint>
+
+int main(int, char **)
+{
+    volatile std::atomic<char>    size_1;
+    volatile std::atomic<short>   size_2;
+    volatile std::atomic<int>     size_4;
+    volatile std::atomic<int64_t> size_8;
+
+    ++size_1;
+    ++size_2;
+    ++size_4;
+    ++size_8;
+
+    (void)size_1.load(std::memory_order_relaxed);
+    (void)size_2.load(std::memory_order_relaxed);
+    (void)size_4.load(std::memory_order_relaxed);
+    (void)size_8.load(std::memory_order_relaxed);
+
+    return 0;
+}
+
+calebdebebe32alt@penguin:~/minecraft/PrismLauncher$ exit
+logout
