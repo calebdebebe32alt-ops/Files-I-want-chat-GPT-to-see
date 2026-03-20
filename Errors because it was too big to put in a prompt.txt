@@ -1,350 +1,104 @@
-calebdebebe32alt@penguin:~/minecraft$ sudo apt install -y qt6-base-dev qt6-tools-dev-tools libgl1-mesa-dev build-essential cmake git
+calebdebebe32alt@penguin:~/minecraft/PrismLauncher$ sudo apt install -y \
+qt6-base-dev \
+qt6-base-dev-tools \
+qt6-tools-dev \
+qt6-tools-dev-tools \
+qt6-l10n-tools \
+libqt6svg6-dev \
+libgl1-mesa-dev \
+libx11-dev \
+libxext-dev \
+libxrandr-dev \
+libxcursor-dev \
+libxi-dev \
+libxinerama-dev
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
-build-essential is already the newest version (12.9).
-cmake is already the newest version (3.25.1-1).
-git is already the newest version (1:2.39.5-0+deb12u3).
+Note, selecting 'qt6-svg-dev' instead of 'libqt6svg6-dev'
+qt6-base-dev is already the newest version (6.4.2+dfsg-10).
+qt6-base-dev-tools is already the newest version (6.4.2+dfsg-10).
+qt6-base-dev-tools set to manually installed.
+qt6-tools-dev-tools is already the newest version (6.4.2~rc1-2).
+qt6-l10n-tools is already the newest version (6.4.2~rc1-2).
+qt6-l10n-tools set to manually installed.
+libgl1-mesa-dev is already the newest version (22.3.6-1+deb12u1).
+libx11-dev is already the newest version (2:1.8.4-2+deb12u2).
+libx11-dev set to manually installed.
 The following additional packages will be installed:
-  assistant-qt6 designer-qt6 libb2-1 libclang-cpp15 libclang1-15 libegl-dev libgl-dev libgles-dev libgles1 libglvnd-core-dev libglvnd-dev libglx-dev libgumbo1 liblitehtml0 libopengl-dev libopengl0
-  libpthread-stubs0-dev libqt6concurrent6 libqt6core6 libqt6dbus6 libqt6designer6 libqt6designercomponents6 libqt6gui6 libqt6help6 libqt6network6 libqt6opengl6 libqt6opengl6-dev libqt6openglwidgets6
-  libqt6printsupport6 libqt6qml6 libqt6qmlmodels6 libqt6quick6 libqt6quickwidgets6 libqt6sql6 libqt6sql6-sqlite libqt6test6 libqt6uitools6 libqt6widgets6 libqt6xml6 libts0 libvulkan-dev libx11-dev libxau-dev
-  libxcb1-dev libxdmcp-dev linguist-qt6 qdbus-qt6 qmake6 qmake6-bin qt6-base-dev-tools qt6-documentation-tools qt6-gtk-platformtheme qt6-l10n-tools qt6-qpa-plugins qt6-translations-l10n x11proto-dev
-  xorg-sgml-doctools xtrans-dev
+libqt6svg6 libqt6svgwidgets6 libxfixes-dev libxrender-dev
 Suggested packages:
-  qt6-qmltooling-plugins libx11-doc libxcb-doc
+libxext-doc
 The following NEW packages will be installed:
-  assistant-qt6 designer-qt6 libb2-1 libclang-cpp15 libclang1-15 libegl-dev libgl-dev libgl1-mesa-dev libgles-dev libgles1 libglvnd-core-dev libglvnd-dev libglx-dev libgumbo1 liblitehtml0 libopengl-dev
-  libopengl0 libpthread-stubs0-dev libqt6concurrent6 libqt6core6 libqt6dbus6 libqt6designer6 libqt6designercomponents6 libqt6gui6 libqt6help6 libqt6network6 libqt6opengl6 libqt6opengl6-dev libqt6openglwidgets6
-  libqt6printsupport6 libqt6qml6 libqt6qmlmodels6 libqt6quick6 libqt6quickwidgets6 libqt6sql6 libqt6sql6-sqlite libqt6test6 libqt6uitools6 libqt6widgets6 libqt6xml6 libts0 libvulkan-dev libx11-dev libxau-dev
-  libxcb1-dev libxdmcp-dev linguist-qt6 qdbus-qt6 qmake6 qmake6-bin qt6-base-dev qt6-base-dev-tools qt6-documentation-tools qt6-gtk-platformtheme qt6-l10n-tools qt6-qpa-plugins qt6-tools-dev-tools
-  qt6-translations-l10n x11proto-dev xorg-sgml-doctools xtrans-dev
-0 upgraded, 61 newly installed, 0 to remove and 0 not upgraded.
-Need to get 41.9 MB of archives.
-After this operation, 224 MB of additional disk space will be used.
-Get:1 https://deb.debian.org/debian bookworm/main arm64 libgumbo1 arm64 0.10.1+dfsg-5 [106 kB]
-Get:2 https://deb.debian.org/debian bookworm/main arm64 liblitehtml0 arm64 0.6-1 [171 kB]
-Get:3 https://deb.debian.org/debian bookworm/main arm64 libb2-1 arm64 0.98.1-1.1 [16.1 kB]
-Get:4 https://deb.debian.org/debian bookworm/main arm64 libqt6core6 arm64 6.4.2+dfsg-10 [1,468 kB]
-Get:5 https://deb.debian.org/debian bookworm/main arm64 libopengl0 arm64 1.6.0-1 [31.7 kB]
-Get:6 https://deb.debian.org/debian bookworm/main arm64 libqt6dbus6 arm64 6.4.2+dfsg-10 [230 kB]
-Get:7 https://deb.debian.org/debian bookworm/main arm64 libts0 arm64 1.22-1+b1 [63.4 kB]
-Get:8 https://deb.debian.org/debian bookworm/main arm64 libqt6gui6 arm64 6.4.2+dfsg-10 [2,598 kB]
-Get:9 https://deb.debian.org/debian bookworm/main arm64 libqt6sql6 arm64 6.4.2+dfsg-10 [127 kB]
-Get:10 https://deb.debian.org/debian bookworm/main arm64 libqt6widgets6 arm64 6.4.2+dfsg-10 [2,312 kB]
-Get:11 https://deb.debian.org/debian bookworm/main arm64 libqt6help6 arm64 6.4.2~rc1-2 [164 kB]
-Get:12 https://deb.debian.org/debian bookworm/main arm64 libqt6printsupport6 arm64 6.4.2+dfsg-10 [200 kB]
-Get:13 https://deb.debian.org/debian bookworm/main arm64 assistant-qt6 arm64 6.4.2~rc1-2 [238 kB]
-Get:14 https://deb.debian.org/debian bookworm/main arm64 libqt6opengl6 arm64 6.4.2+dfsg-10 [367 kB]
-Get:15 https://deb.debian.org/debian bookworm/main arm64 libqt6openglwidgets6 arm64 6.4.2+dfsg-10 [43.0 kB]
-Get:16 https://deb.debian.org/debian bookworm/main arm64 libqt6xml6 arm64 6.4.2+dfsg-10 [74.7 kB]
-Get:17 https://deb.debian.org/debian bookworm/main arm64 libqt6designer6 arm64 6.4.2~rc1-2 [2,779 kB]
-Get:18 https://deb.debian.org/debian bookworm/main arm64 libqt6designercomponents6 arm64 6.4.2~rc1-2 [770 kB]
-Get:19 https://deb.debian.org/debian bookworm/main arm64 libqt6network6 arm64 6.4.2+dfsg-10 [643 kB]
-Get:20 https://deb.debian.org/debian bookworm/main arm64 libqt6qml6 arm64 6.4.2+dfsg-1 [1,371 kB]
-Get:21 https://deb.debian.org/debian bookworm/main arm64 libqt6qmlmodels6 arm64 6.4.2+dfsg-1 [231 kB]
-Get:22 https://deb.debian.org/debian bookworm/main arm64 libqt6quick6 arm64 6.4.2+dfsg-1 [1,707 kB]
-Get:23 https://deb.debian.org/debian bookworm/main arm64 libqt6quickwidgets6 arm64 6.4.2+dfsg-1 [41.8 kB]
-Get:24 https://deb.debian.org/debian bookworm/main arm64 designer-qt6 arm64 6.4.2~rc1-2 [152 kB]
-Get:25 https://deb.debian.org/debian bookworm/main arm64 libclang-cpp15 arm64 1:15.0.6-4+b1 [10.5 MB]
-Get:26 https://deb.debian.org/debian bookworm/main arm64 libclang1-15 arm64 1:15.0.6-4+b1 [5,706 kB]
-Get:27 https://deb.debian.org/debian bookworm/main arm64 xorg-sgml-doctools all 1:1.11-1.1 [22.1 kB]
-Get:28 https://deb.debian.org/debian bookworm/main arm64 x11proto-dev all 2022.1-1 [599 kB]
-Get:29 https://deb.debian.org/debian bookworm/main arm64 libxau-dev arm64 1:1.0.9-1 [23.2 kB]
-Get:30 https://deb.debian.org/debian bookworm/main arm64 libxdmcp-dev arm64 1:1.1.2-3 [41.2 kB]
-Get:31 https://deb.debian.org/debian bookworm/main arm64 xtrans-dev all 1.4.0-1 [98.7 kB]
-Get:32 https://deb.debian.org/debian bookworm/main arm64 libpthread-stubs0-dev arm64 0.4-1 [5,336 B]
-Get:33 https://deb.debian.org/debian bookworm/main arm64 libxcb1-dev arm64 1.15-1 [182 kB]
-Get:34 https://deb.debian.org/debian bookworm/main arm64 libx11-dev arm64 2:1.8.4-2+deb12u2 [818 kB]
-Get:35 https://deb.debian.org/debian bookworm/main arm64 libglx-dev arm64 1.6.0-1 [15.3 kB]
-Get:36 https://deb.debian.org/debian bookworm/main arm64 libgl-dev arm64 1.6.0-1 [100 kB]
-Get:37 https://deb.debian.org/debian bookworm/main arm64 libegl-dev arm64 1.6.0-1 [19.1 kB]
-Get:38 https://deb.debian.org/debian bookworm/main arm64 libglvnd-core-dev arm64 1.6.0-1 [12.9 kB]
-Get:39 https://deb.debian.org/debian bookworm/main arm64 libgles1 arm64 1.6.0-1 [12.1 kB]
-Get:40 https://deb.debian.org/debian bookworm/main arm64 libgles-dev arm64 1.6.0-1 [50.4 kB]
-Get:41 https://deb.debian.org/debian bookworm/main arm64 libopengl-dev arm64 1.6.0-1 [4,932 B]
-Get:42 https://deb.debian.org/debian bookworm/main arm64 libglvnd-dev arm64 1.6.0-1 [4,696 B]
-Get:43 https://deb.debian.org/debian bookworm/main arm64 libgl1-mesa-dev arm64 22.3.6-1+deb12u1 [14.5 kB]
-Get:44 https://deb.debian.org/debian bookworm/main arm64 libqt6concurrent6 arm64 6.4.2+dfsg-10 [37.1 kB]
-Get:45 https://deb.debian.org/debian bookworm/main arm64 libqt6test6 arm64 6.4.2+dfsg-10 [147 kB]
-Get:46 https://deb.debian.org/debian bookworm/main arm64 libvulkan-dev arm64 1.3.239.0-1 [1,115 kB]
-Get:47 https://deb.debian.org/debian bookworm/main arm64 qmake6-bin arm64 6.4.2+dfsg-10 [513 kB]
-Get:48 https://deb.debian.org/debian bookworm/main arm64 qmake6 arm64 6.4.2+dfsg-10 [179 kB]
-Get:49 https://deb.debian.org/debian bookworm/main arm64 qt6-base-dev-tools arm64 6.4.2+dfsg-10 [797 kB]
-Get:50 https://deb.debian.org/debian bookworm/main arm64 qt6-qpa-plugins arm64 6.4.2+dfsg-10 [84.2 kB]
-Get:51 https://deb.debian.org/debian bookworm/main arm64 qt6-base-dev arm64 6.4.2+dfsg-10 [1,363 kB]
-Get:52 https://deb.debian.org/debian bookworm/main arm64 libqt6opengl6-dev arm64 6.4.2+dfsg-10 [115 kB]
-Get:53 https://deb.debian.org/debian bookworm/main arm64 libqt6sql6-sqlite arm64 6.4.2+dfsg-10 [56.7 kB]
-Get:54 https://deb.debian.org/debian bookworm/main arm64 libqt6uitools6 arm64 6.4.2~rc1-2 [143 kB]
-Get:55 https://deb.debian.org/debian bookworm/main arm64 linguist-qt6 arm64 6.4.2~rc1-2 [321 kB]
-Get:56 https://deb.debian.org/debian bookworm/main arm64 qdbus-qt6 arm64 6.4.2~rc1-2 [27.2 kB]
-Get:57 https://deb.debian.org/debian bookworm/main arm64 qt6-documentation-tools arm64 6.4.2~rc1-2 [533 kB]
-Get:58 https://deb.debian.org/debian bookworm/main arm64 qt6-gtk-platformtheme arm64 6.4.2+dfsg-10 [55.5 kB]
-Get:59 https://deb.debian.org/debian bookworm/main arm64 qt6-l10n-tools arm64 6.4.2~rc1-2 [397 kB]
-Get:60 https://deb.debian.org/debian bookworm/main arm64 qt6-tools-dev-tools arm64 6.4.2~rc1-2 [232 kB]
-Get:61 https://deb.debian.org/debian bookworm/main arm64 qt6-translations-l10n all 6.4.2-1 [1,647 kB]
-Fetched 41.9 MB in 4s (9,367 kB/s)                
-Extracting templates from packages: 100%
-Selecting previously unselected package libgumbo1:arm64.
-(Reading database ... 56866 files and directories currently installed.)
-Preparing to unpack .../00-libgumbo1_0.10.1+dfsg-5_arm64.deb ...
-Unpacking libgumbo1:arm64 (0.10.1+dfsg-5) ...
-Selecting previously unselected package liblitehtml0:arm64.
-Preparing to unpack .../01-liblitehtml0_0.6-1_arm64.deb ...
-Unpacking liblitehtml0:arm64 (0.6-1) ...
-Selecting previously unselected package libb2-1:arm64.
-Preparing to unpack .../02-libb2-1_0.98.1-1.1_arm64.deb ...
-Unpacking libb2-1:arm64 (0.98.1-1.1) ...
-Selecting previously unselected package libqt6core6:arm64.
-Preparing to unpack .../03-libqt6core6_6.4.2+dfsg-10_arm64.deb ...
-Unpacking libqt6core6:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package libopengl0:arm64.
-Preparing to unpack .../04-libopengl0_1.6.0-1_arm64.deb ...
-Unpacking libopengl0:arm64 (1.6.0-1) ...
-Selecting previously unselected package libqt6dbus6:arm64.
-Preparing to unpack .../05-libqt6dbus6_6.4.2+dfsg-10_arm64.deb ...
-Unpacking libqt6dbus6:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package libts0:arm64.
-Preparing to unpack .../06-libts0_1.22-1+b1_arm64.deb ...
-Unpacking libts0:arm64 (1.22-1+b1) ...
-Selecting previously unselected package libqt6gui6:arm64.
-Preparing to unpack .../07-libqt6gui6_6.4.2+dfsg-10_arm64.deb ...
-Unpacking libqt6gui6:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package libqt6sql6:arm64.
-Preparing to unpack .../08-libqt6sql6_6.4.2+dfsg-10_arm64.deb ...
-Unpacking libqt6sql6:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package libqt6widgets6:arm64.
-Preparing to unpack .../09-libqt6widgets6_6.4.2+dfsg-10_arm64.deb ...
-Unpacking libqt6widgets6:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package libqt6help6:arm64.
-Preparing to unpack .../10-libqt6help6_6.4.2~rc1-2_arm64.deb ...
-Unpacking libqt6help6:arm64 (6.4.2~rc1-2) ...
-Selecting previously unselected package libqt6printsupport6:arm64.
-Preparing to unpack .../11-libqt6printsupport6_6.4.2+dfsg-10_arm64.deb ...
-Unpacking libqt6printsupport6:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package assistant-qt6.
-Preparing to unpack .../12-assistant-qt6_6.4.2~rc1-2_arm64.deb ...
-Unpacking assistant-qt6 (6.4.2~rc1-2) ...
-Selecting previously unselected package libqt6opengl6:arm64.
-Preparing to unpack .../13-libqt6opengl6_6.4.2+dfsg-10_arm64.deb ...
-Unpacking libqt6opengl6:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package libqt6openglwidgets6:arm64.
-Preparing to unpack .../14-libqt6openglwidgets6_6.4.2+dfsg-10_arm64.deb ...
-Unpacking libqt6openglwidgets6:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package libqt6xml6:arm64.
-Preparing to unpack .../15-libqt6xml6_6.4.2+dfsg-10_arm64.deb ...
-Unpacking libqt6xml6:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package libqt6designer6:arm64.
-Preparing to unpack .../16-libqt6designer6_6.4.2~rc1-2_arm64.deb ...
-Unpacking libqt6designer6:arm64 (6.4.2~rc1-2) ...
-Selecting previously unselected package libqt6designercomponents6:arm64.
-Preparing to unpack .../17-libqt6designercomponents6_6.4.2~rc1-2_arm64.deb ...
-Unpacking libqt6designercomponents6:arm64 (6.4.2~rc1-2) ...
-Selecting previously unselected package libqt6network6:arm64.
-Preparing to unpack .../18-libqt6network6_6.4.2+dfsg-10_arm64.deb ...
-Unpacking libqt6network6:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package libqt6qml6:arm64.
-Preparing to unpack .../19-libqt6qml6_6.4.2+dfsg-1_arm64.deb ...
-Unpacking libqt6qml6:arm64 (6.4.2+dfsg-1) ...
-Selecting previously unselected package libqt6qmlmodels6:arm64.
-Preparing to unpack .../20-libqt6qmlmodels6_6.4.2+dfsg-1_arm64.deb ...
-Unpacking libqt6qmlmodels6:arm64 (6.4.2+dfsg-1) ...
-Selecting previously unselected package libqt6quick6:arm64.
-Preparing to unpack .../21-libqt6quick6_6.4.2+dfsg-1_arm64.deb ...
-Unpacking libqt6quick6:arm64 (6.4.2+dfsg-1) ...
-Selecting previously unselected package libqt6quickwidgets6:arm64.
-Preparing to unpack .../22-libqt6quickwidgets6_6.4.2+dfsg-1_arm64.deb ...
-Unpacking libqt6quickwidgets6:arm64 (6.4.2+dfsg-1) ...
-Selecting previously unselected package designer-qt6.
-Preparing to unpack .../23-designer-qt6_6.4.2~rc1-2_arm64.deb ...
-Unpacking designer-qt6 (6.4.2~rc1-2) ...
-Selecting previously unselected package libclang-cpp15.
-Preparing to unpack .../24-libclang-cpp15_1%3a15.0.6-4+b1_arm64.deb ...
-Unpacking libclang-cpp15 (1:15.0.6-4+b1) ...
-Selecting previously unselected package libclang1-15.
-Preparing to unpack .../25-libclang1-15_1%3a15.0.6-4+b1_arm64.deb ...
-Unpacking libclang1-15 (1:15.0.6-4+b1) ...
-Selecting previously unselected package xorg-sgml-doctools.
-Preparing to unpack .../26-xorg-sgml-doctools_1%3a1.11-1.1_all.deb ...
-Unpacking xorg-sgml-doctools (1:1.11-1.1) ...
-Selecting previously unselected package x11proto-dev.
-Preparing to unpack .../27-x11proto-dev_2022.1-1_all.deb ...
-Unpacking x11proto-dev (2022.1-1) ...
-Selecting previously unselected package libxau-dev:arm64.
-Preparing to unpack .../28-libxau-dev_1%3a1.0.9-1_arm64.deb ...
-Unpacking libxau-dev:arm64 (1:1.0.9-1) ...
-Selecting previously unselected package libxdmcp-dev:arm64.
-Preparing to unpack .../29-libxdmcp-dev_1%3a1.1.2-3_arm64.deb ...
-Unpacking libxdmcp-dev:arm64 (1:1.1.2-3) ...
-Selecting previously unselected package xtrans-dev.
-Preparing to unpack .../30-xtrans-dev_1.4.0-1_all.deb ...
-Unpacking xtrans-dev (1.4.0-1) ...
-Selecting previously unselected package libpthread-stubs0-dev:arm64.
-Preparing to unpack .../31-libpthread-stubs0-dev_0.4-1_arm64.deb ...
-Unpacking libpthread-stubs0-dev:arm64 (0.4-1) ...
-Selecting previously unselected package libxcb1-dev:arm64.
-Preparing to unpack .../32-libxcb1-dev_1.15-1_arm64.deb ...
-Unpacking libxcb1-dev:arm64 (1.15-1) ...
-Selecting previously unselected package libx11-dev:arm64.
-Preparing to unpack .../33-libx11-dev_2%3a1.8.4-2+deb12u2_arm64.deb ...
-Unpacking libx11-dev:arm64 (2:1.8.4-2+deb12u2) ...
-Selecting previously unselected package libglx-dev:arm64.
-Preparing to unpack .../34-libglx-dev_1.6.0-1_arm64.deb ...
-Unpacking libglx-dev:arm64 (1.6.0-1) ...
-Selecting previously unselected package libgl-dev:arm64.
-Preparing to unpack .../35-libgl-dev_1.6.0-1_arm64.deb ...
-Unpacking libgl-dev:arm64 (1.6.0-1) ...
-Selecting previously unselected package libegl-dev:arm64.
-Preparing to unpack .../36-libegl-dev_1.6.0-1_arm64.deb ...
-Unpacking libegl-dev:arm64 (1.6.0-1) ...
-Selecting previously unselected package libglvnd-core-dev:arm64.
-Preparing to unpack .../37-libglvnd-core-dev_1.6.0-1_arm64.deb ...
-Unpacking libglvnd-core-dev:arm64 (1.6.0-1) ...
-Selecting previously unselected package libgles1:arm64.
-Preparing to unpack .../38-libgles1_1.6.0-1_arm64.deb ...
-Unpacking libgles1:arm64 (1.6.0-1) ...
-Selecting previously unselected package libgles-dev:arm64.
-Preparing to unpack .../39-libgles-dev_1.6.0-1_arm64.deb ...
-Unpacking libgles-dev:arm64 (1.6.0-1) ...
-Selecting previously unselected package libopengl-dev:arm64.
-Preparing to unpack .../40-libopengl-dev_1.6.0-1_arm64.deb ...
-Unpacking libopengl-dev:arm64 (1.6.0-1) ...
-Selecting previously unselected package libglvnd-dev:arm64.
-Preparing to unpack .../41-libglvnd-dev_1.6.0-1_arm64.deb ...
-Unpacking libglvnd-dev:arm64 (1.6.0-1) ...
-Selecting previously unselected package libgl1-mesa-dev:arm64.
-Preparing to unpack .../42-libgl1-mesa-dev_22.3.6-1+deb12u1_arm64.deb ...
-Unpacking libgl1-mesa-dev:arm64 (22.3.6-1+deb12u1) ...
-Selecting previously unselected package libqt6concurrent6:arm64.
-Preparing to unpack .../43-libqt6concurrent6_6.4.2+dfsg-10_arm64.deb ...
-Unpacking libqt6concurrent6:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package libqt6test6:arm64.
-Preparing to unpack .../44-libqt6test6_6.4.2+dfsg-10_arm64.deb ...
-Unpacking libqt6test6:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package libvulkan-dev:arm64.
-Preparing to unpack .../45-libvulkan-dev_1.3.239.0-1_arm64.deb ...
-Unpacking libvulkan-dev:arm64 (1.3.239.0-1) ...
-Selecting previously unselected package qmake6-bin.
-Preparing to unpack .../46-qmake6-bin_6.4.2+dfsg-10_arm64.deb ...
-Unpacking qmake6-bin (6.4.2+dfsg-10) ...
-Selecting previously unselected package qmake6:arm64.
-Preparing to unpack .../47-qmake6_6.4.2+dfsg-10_arm64.deb ...
-Unpacking qmake6:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package qt6-base-dev-tools.
-Preparing to unpack .../48-qt6-base-dev-tools_6.4.2+dfsg-10_arm64.deb ...
-Unpacking qt6-base-dev-tools (6.4.2+dfsg-10) ...
-Selecting previously unselected package qt6-qpa-plugins:arm64.
-Preparing to unpack .../49-qt6-qpa-plugins_6.4.2+dfsg-10_arm64.deb ...
-Unpacking qt6-qpa-plugins:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package qt6-base-dev:arm64.
-Preparing to unpack .../50-qt6-base-dev_6.4.2+dfsg-10_arm64.deb ...
-Unpacking qt6-base-dev:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package libqt6opengl6-dev:arm64.
-Preparing to unpack .../51-libqt6opengl6-dev_6.4.2+dfsg-10_arm64.deb ...
-Unpacking libqt6opengl6-dev:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package libqt6sql6-sqlite:arm64.
-Preparing to unpack .../52-libqt6sql6-sqlite_6.4.2+dfsg-10_arm64.deb ...
-Unpacking libqt6sql6-sqlite:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package libqt6uitools6:arm64.
-Preparing to unpack .../53-libqt6uitools6_6.4.2~rc1-2_arm64.deb ...
-Unpacking libqt6uitools6:arm64 (6.4.2~rc1-2) ...
-Selecting previously unselected package linguist-qt6.
-Preparing to unpack .../54-linguist-qt6_6.4.2~rc1-2_arm64.deb ...
-Unpacking linguist-qt6 (6.4.2~rc1-2) ...
-Selecting previously unselected package qdbus-qt6.
-Preparing to unpack .../55-qdbus-qt6_6.4.2~rc1-2_arm64.deb ...
-Unpacking qdbus-qt6 (6.4.2~rc1-2) ...
-Selecting previously unselected package qt6-documentation-tools.
-Preparing to unpack .../56-qt6-documentation-tools_6.4.2~rc1-2_arm64.deb ...
-Unpacking qt6-documentation-tools (6.4.2~rc1-2) ...
-Selecting previously unselected package qt6-gtk-platformtheme:arm64.
-Preparing to unpack .../57-qt6-gtk-platformtheme_6.4.2+dfsg-10_arm64.deb ...
-Unpacking qt6-gtk-platformtheme:arm64 (6.4.2+dfsg-10) ...
-Selecting previously unselected package qt6-l10n-tools.
-Preparing to unpack .../58-qt6-l10n-tools_6.4.2~rc1-2_arm64.deb ...
-Unpacking qt6-l10n-tools (6.4.2~rc1-2) ...
-Selecting previously unselected package qt6-tools-dev-tools.
-Preparing to unpack .../59-qt6-tools-dev-tools_6.4.2~rc1-2_arm64.deb ...
-Unpacking qt6-tools-dev-tools (6.4.2~rc1-2) ...
-Selecting previously unselected package qt6-translations-l10n.
-Preparing to unpack .../60-qt6-translations-l10n_6.4.2-1_all.deb ...
-Unpacking qt6-translations-l10n (6.4.2-1) ...
-Setting up libb2-1:arm64 (0.98.1-1.1) ...
-Setting up libvulkan-dev:arm64 (1.3.239.0-1) ...
-Setting up libglvnd-core-dev:arm64 (1.6.0-1) ...
-Setting up libclang1-15 (1:15.0.6-4+b1) ...
-Setting up libqt6core6:arm64 (6.4.2+dfsg-10) ...
-Setting up libpthread-stubs0-dev:arm64 (0.4-1) ...
-Setting up libts0:arm64 (1.22-1+b1) ...
-Setting up libopengl0:arm64 (1.6.0-1) ...
-Setting up qt6-translations-l10n (6.4.2-1) ...
-Setting up xtrans-dev (1.4.0-1) ...
-Setting up libgumbo1:arm64 (0.10.1+dfsg-5) ...
-Setting up liblitehtml0:arm64 (0.6-1) ...
-Setting up libqt6xml6:arm64 (6.4.2+dfsg-10) ...
-Setting up libqt6sql6:arm64 (6.4.2+dfsg-10) ...
-Setting up libqt6sql6-sqlite:arm64 (6.4.2+dfsg-10) ...
-Setting up libgles1:arm64 (1.6.0-1) ...
-Setting up qmake6-bin (6.4.2+dfsg-10) ...
-Setting up libclang-cpp15 (1:15.0.6-4+b1) ...
-Setting up xorg-sgml-doctools (1:1.11-1.1) ...
-Setting up libopengl-dev:arm64 (1.6.0-1) ...
-Setting up libqt6dbus6:arm64 (6.4.2+dfsg-10) ...
-Setting up libqt6concurrent6:arm64 (6.4.2+dfsg-10) ...
-Setting up libqt6test6:arm64 (6.4.2+dfsg-10) ...
-Setting up qt6-base-dev-tools (6.4.2+dfsg-10) ...
-Setting up qdbus-qt6 (6.4.2~rc1-2) ...
-Setting up qmake6:arm64 (6.4.2+dfsg-10) ...
-Setting up libqt6gui6:arm64 (6.4.2+dfsg-10) ...
-Setting up qt6-gtk-platformtheme:arm64 (6.4.2+dfsg-10) ...
-Setting up libqt6network6:arm64 (6.4.2+dfsg-10) ...
-Setting up qt6-qpa-plugins:arm64 (6.4.2+dfsg-10) ...
-Setting up libqt6qml6:arm64 (6.4.2+dfsg-1) ...
-Setting up libqt6opengl6:arm64 (6.4.2+dfsg-10) ...
-Setting up libqt6qmlmodels6:arm64 (6.4.2+dfsg-1) ...
-Setting up libqt6widgets6:arm64 (6.4.2+dfsg-10) ...
-Setting up libqt6quick6:arm64 (6.4.2+dfsg-1) ...
-Setting up libqt6openglwidgets6:arm64 (6.4.2+dfsg-10) ...
-Setting up libqt6printsupport6:arm64 (6.4.2+dfsg-10) ...
-Setting up qt6-l10n-tools (6.4.2~rc1-2) ...
-Setting up libqt6help6:arm64 (6.4.2~rc1-2) ...
-Setting up qt6-documentation-tools (6.4.2~rc1-2) ...
-Setting up libqt6designer6:arm64 (6.4.2~rc1-2) ...
-Setting up libqt6quickwidgets6:arm64 (6.4.2+dfsg-1) ...
-Setting up libqt6uitools6:arm64 (6.4.2~rc1-2) ...
-Setting up assistant-qt6 (6.4.2~rc1-2) ...
-Setting up libqt6designercomponents6:arm64 (6.4.2~rc1-2) ...
-Setting up linguist-qt6 (6.4.2~rc1-2) ...
-Setting up designer-qt6 (6.4.2~rc1-2) ...
-Setting up qt6-tools-dev-tools (6.4.2~rc1-2) ...
-Processing triggers for libc-bin (2.36-9+deb12u13) ...
+libqt6svg6 libqt6svgwidgets6 libxcursor-dev libxext-dev libxfixes-dev libxi-dev libxinerama-dev libxrandr-dev libxrender-dev qt6-svg-dev qt6-tools-dev
+0 upgraded, 11 newly installed, 0 to remove and 0 not upgraded.
+Need to get 771 kB of archives.
+After this operation, 3,758 kB of additional disk space will be used.
+Get:1 https://deb.debian.org/debian bookworm/main arm64 libqt6svg6 arm64 6.4.2-2 [132 kB]
+Get:2 https://deb.debian.org/debian bookworm/main arm64 libqt6svgwidgets6 arm64 6.4.2-2 [16.9 kB]
+Get:3 https://deb.debian.org/debian bookworm/main arm64 libxrender-dev arm64 1:0.9.10-1.1 [40.5 kB]
+Get:4 https://deb.debian.org/debian bookworm/main arm64 libxfixes-dev arm64 1:6.0.0-2 [25.2 kB]
+Get:5 https://deb.debian.org/debian bookworm/main arm64 libxcursor-dev arm64 1:1.2.1-1 [52.2 kB]
+Get:6 https://deb.debian.org/debian bookworm/main arm64 libxext-dev arm64 2:1.3.4-1+b1 [107 kB]
+Get:7 https://deb.debian.org/debian bookworm/main arm64 libxi-dev arm64 2:1.8-1+b1 [244 kB]
+Get:8 https://deb.debian.org/debian bookworm/main arm64 libxinerama-dev arm64 2:1.1.4-3 [20.1 kB]
+Get:9 https://deb.debian.org/debian bookworm/main arm64 libxrandr-dev arm64 2:1.5.2-2+b1 [46.9 kB]
+Get:10 https://deb.debian.org/debian bookworm/main arm64 qt6-svg-dev arm64 6.4.2-2 [18.5 kB]
+Get:11 https://deb.debian.org/debian bookworm/main arm64 qt6-tools-dev arm64 6.4.2~rc1-2 [67.7 kB]
+Fetched 771 kB in 1s (851 kB/s)
+Selecting previously unselected package libqt6svg6:arm64.
+(Reading database ... 61211 files and directories currently installed.)
+Preparing to unpack .../00-libqt6svg6_6.4.2-2_arm64.deb ...
+Unpacking libqt6svg6:arm64 (6.4.2-2) ...
+Selecting previously unselected package libqt6svgwidgets6:arm64.
+Preparing to unpack .../01-libqt6svgwidgets6_6.4.2-2_arm64.deb ...
+Unpacking libqt6svgwidgets6:arm64 (6.4.2-2) ...
+Selecting previously unselected package libxrender-dev:arm64.
+Preparing to unpack .../02-libxrender-dev_1%3a0.9.10-1.1_arm64.deb ...
+Unpacking libxrender-dev:arm64 (1:0.9.10-1.1) ...
+Selecting previously unselected package libxfixes-dev:arm64.
+Preparing to unpack .../03-libxfixes-dev_1%3a6.0.0-2_arm64.deb ...
+Unpacking libxfixes-dev:arm64 (1:6.0.0-2) ...
+Selecting previously unselected package libxcursor-dev:arm64.
+Preparing to unpack .../04-libxcursor-dev_1%3a1.2.1-1_arm64.deb ...
+Unpacking libxcursor-dev:arm64 (1:1.2.1-1) ...
+Selecting previously unselected package libxext-dev:arm64.
+Preparing to unpack .../05-libxext-dev_2%3a1.3.4-1+b1_arm64.deb ...
+Unpacking libxext-dev:arm64 (2:1.3.4-1+b1) ...
+Selecting previously unselected package libxi-dev:arm64.
+Preparing to unpack .../06-libxi-dev_2%3a1.8-1+b1_arm64.deb ...
+Unpacking libxi-dev:arm64 (2:1.8-1+b1) ...
+Selecting previously unselected package libxinerama-dev:arm64.
+Preparing to unpack .../07-libxinerama-dev_2%3a1.1.4-3_arm64.deb ...
+Unpacking libxinerama-dev:arm64 (2:1.1.4-3) ...
+Selecting previously unselected package libxrandr-dev:arm64.
+Preparing to unpack .../08-libxrandr-dev_2%3a1.5.2-2+b1_arm64.deb ...
+Unpacking libxrandr-dev:arm64 (2:1.5.2-2+b1) ...
+Selecting previously unselected package qt6-svg-dev:arm64.
+Preparing to unpack .../09-qt6-svg-dev_6.4.2-2_arm64.deb ...
+Unpacking qt6-svg-dev:arm64 (6.4.2-2) ...
+Selecting previously unselected package qt6-tools-dev:arm64.
+Preparing to unpack .../10-qt6-tools-dev_6.4.2~rc1-2_arm64.deb ...
+Unpacking qt6-tools-dev:arm64 (6.4.2~rc1-2) ...
+Setting up libxfixes-dev:arm64 (1:6.0.0-2) ...
+Setting up libqt6svg6:arm64 (6.4.2-2) ...
+Setting up qt6-tools-dev:arm64 (6.4.2~rc1-2) ...
+Setting up libqt6svgwidgets6:arm64 (6.4.2-2) ...
+Setting up libxext-dev:arm64 (2:1.3.4-1+b1) ...
+Setting up libxi-dev:arm64 (2:1.8-1+b1) ...
+Setting up libxrender-dev:arm64 (1:0.9.10-1.1) ...
+Setting up libxcursor-dev:arm64 (1:1.2.1-1) ...
+Setting up libxrandr-dev:arm64 (2:1.5.2-2+b1) ...
+Setting up qt6-svg-dev:arm64 (6.4.2-2) ...
+Setting up libxinerama-dev:arm64 (2:1.1.4-3) ...
 Processing triggers for man-db (2.11.2-2) ...
-Processing triggers for sgml-base (1.31) ...
-Setting up x11proto-dev (2022.1-1) ...
-Setting up libxau-dev:arm64 (1:1.0.9-1) ...
-Setting up libxdmcp-dev:arm64 (1:1.1.2-3) ...
-Setting up libxcb1-dev:arm64 (1.15-1) ...
-Setting up libx11-dev:arm64 (2:1.8.4-2+deb12u2) ...
-Setting up libglx-dev:arm64 (1.6.0-1) ...
-Setting up libgl-dev:arm64 (1.6.0-1) ...
-Setting up libegl-dev:arm64 (1.6.0-1) ...
-Setting up qt6-base-dev:arm64 (6.4.2+dfsg-10) ...
-Setting up libqt6opengl6-dev:arm64 (6.4.2+dfsg-10) ...
-Setting up libgles-dev:arm64 (1.6.0-1) ...
-Setting up libglvnd-dev:arm64 (1.6.0-1) ...
-Setting up libgl1-mesa-dev:arm64 (22.3.6-1+deb12u1) ...
-calebdebebe32alt@penguin:~/minecraft$ cd ~/minecraft
-git clone https://github.com/PrismLauncher/PrismLauncher.git
-cd PrismLauncher
+Processing triggers for libc-bin (2.36-9+deb12u13) ...
+calebdebebe32alt@penguin:~/minecraft/PrismLauncher$ cd ~/minecraft/PrismLauncher
+
+rm -rf build
+
 cmake -B build
 cmake --build build -j4
-Cloning into 'PrismLauncher'...
-remote: Enumerating objects: 92520, done.
-remote: Counting objects: 100% (979/979), done.
-remote: Compressing objects: 100% (468/468), done.
-remote: Total 92520 (delta 800), reused 511 (delta 511), pack-reused 91541 (from 4)
-Receiving objects: 100% (92520/92520), 41.73 MiB | 15.51 MiB/s, done.
-Resolving deltas: 100% (71680/71680), done.
 -- The C compiler identification is GNU 12.2.0
 -- The CXX compiler identification is GNU 12.2.0
 -- Detecting C compiler ABI info
@@ -358,27 +112,47 @@ Resolving deltas: 100% (71680/71680), done.
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
 CMake Error at CMakeLists.txt:157 (find_package):
-  Could not find a package configuration file provided by "ECM" with any of
-  the following names:
+Could not find a package configuration file provided by "ECM" with any of
+the following names:
 
-    ECMConfig.cmake
-    ecm-config.cmake
+ECMConfig.cmake
+ecm-config.cmake
 
-  Add the installation prefix of "ECM" to CMAKE_PREFIX_PATH or set "ECM_DIR"
-  to a directory containing one of the above files.  If "ECM" provides a
-  separate development package or SDK, be sure it has been installed.
+Add the installation prefix of "ECM" to CMAKE_PREFIX_PATH or set "ECM_DIR"
+to a directory containing one of the above files. If "ECM" provides a
+separate development package or SDK, be sure it has been installed.
 
 
 -- Configuring incomplete, errors occurred!
 See also "/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeOutput.log".
 gmake: Makefile: No such file or directory
-gmake: *** No rule to make target 'Makefile'.  Stop.
+gmake: *** No rule to make target 'Makefile'. Stop.
+calebdebebe32alt@penguin:~/minecraft/PrismLauncher$ sudo apt install libssl-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Suggested packages:
+libssl-doc
+The following NEW packages will be installed:
+libssl-dev
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2,314 kB of archives.
+After this operation, 12.9 MB of additional disk space will be used.
+Get:1 https://deb.debian.org/debian-security bookworm-security/main arm64 libssl-dev arm64 3.0.18-1~deb12u2 [2,314 kB]
+Fetched 2,314 kB in 1s (4,359 kB/s)
+Selecting previously unselected package libssl-dev:arm64.
+(Reading database ... 61860 files and directories currently installed.)
+Preparing to unpack .../libssl-dev_3.0.18-1~deb12u2_arm64.deb ...
+Unpacking libssl-dev:arm64 (3.0.18-1~deb12u2) ...
+Setting up libssl-dev:arm64 (3.0.18-1~deb12u2) ...
+calebdebebe32alt@penguin:~/minecraft/PrismLauncher$ QT_QPA_PLATFORM=xcb ./build/PrismLauncher
+-bash: ./build/PrismLauncher: No such file or directory
 calebdebebe32alt@penguin:~/minecraft/PrismLauncher$ cat /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeOutput.log
 The system is: Linux - 6.6.99-09070-g0245f6566c20 - aarch64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: /usr/bin/cc 
-Build flags: 
-Id flags:  
+Compiler: /usr/bin/cc
+Build flags:
+Id flags:
 
 The output was:
 0
@@ -389,9 +163,9 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 The C compiler identification is GNU, found in "/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/3.25.1/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /usr/bin/c++ 
-Build flags: 
-Id flags:  
+Compiler: /usr/bin/c++
+Build flags:
+Id flags:
 
 The output was:
 0
@@ -402,23 +176,23 @@ Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" p
 The CXX compiler identification is GNU, found in "/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/3.25.1/CompilerIdCXX/a.out"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-1o4rgI
+Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-HdVlJn
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b874f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b874f.dir/build.make CMakeFiles/cmTC_b874f.dir/build
-gmake[1]: Entering directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-1o4rgI'
-Building C object CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc   -v -o CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a9ca9/fast && /usr/bin/gmake -f CMakeFiles/cmTC_a9ca9.dir/build.make CMakeFiles/cmTC_a9ca9.dir/build
+gmake[1]: Entering directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-HdVlJn'
+Building C object CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc -v -o CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 Target: aarch64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14+deb12u1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
-gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b874f.dir/'
- /usr/lib/gcc/aarch64-linux-gnu/12/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_b874f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccG4pygT.s
+gcc version 12.2.0 (Debian 12.2.0-14+deb12u1)
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_a9ca9.dir/'
+/usr/lib/gcc/aarch64-linux-gnu/12/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a9ca9.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccekfvYH.s
 GNU C17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)
-        compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.2.0, MPC version 1.3.1, isl version isl-0.25-GMP
+compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.2.0, MPC version 1.3.1, isl version isl-0.25-GMP
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 ignoring nonexistent directory "/usr/local/include/aarch64-linux-gnu"
@@ -426,25 +200,25 @@ ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/12/include-fixed"
 ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/12/../../../../aarch64-linux-gnu/include"
 #include "..." search starts here:
 #include <...> search starts here:
- /usr/lib/gcc/aarch64-linux-gnu/12/include
- /usr/local/include
- /usr/include/aarch64-linux-gnu
- /usr/include
+/usr/lib/gcc/aarch64-linux-gnu/12/include
+/usr/local/include
+/usr/include/aarch64-linux-gnu
+/usr/include
 End of search list.
 GNU C17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)
-        compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.2.0, MPC version 1.3.1, isl version isl-0.25-GMP
+compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.2.0, MPC version 1.3.1, isl version isl-0.25-GMP
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 353d9f3bda0709922bce3bd32cc6f6a4
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b874f.dir/'
- as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o /tmp/ccG4pygT.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_a9ca9.dir/'
+as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o /tmp/ccekfvYH.s
 GNU assembler version 2.40 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.'
-Linking C executable cmTC_b874f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b874f.dir/link.txt --verbose=1
-/usr/bin/cc  -v CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o -o cmTC_b874f 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.'
+Linking C executable cmTC_a9ca9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9ca9.dir/link.txt --verbose=1
+/usr/bin/cc -v CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o -o cmTC_a9ca9
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper
@@ -452,171 +226,171 @@ Target: aarch64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14+deb12u1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
-gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) 
+gcc version 12.2.0 (Debian 12.2.0-14+deb12u1)
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b874f' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_b874f.'
- /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccEj4FnU.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_b874f /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b874f' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_b874f.'
-gmake[1]: Leaving directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-1o4rgI'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a9ca9' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_a9ca9.'
+/usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQVCxqO.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_a9ca9 /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a9ca9' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_a9ca9.'
+gmake[1]: Leaving directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-HdVlJn'
 
 
 
 Parsed C implicit include dir info from above output: rv=done
-  found start of include info
-  found start of implicit include info
-    add: [/usr/lib/gcc/aarch64-linux-gnu/12/include]
-    add: [/usr/local/include]
-    add: [/usr/include/aarch64-linux-gnu]
-    add: [/usr/include]
-  end of search list found
-  collapse include dir [/usr/lib/gcc/aarch64-linux-gnu/12/include] ==> [/usr/lib/gcc/aarch64-linux-gnu/12/include]
-  collapse include dir [/usr/local/include] ==> [/usr/local/include]
-  collapse include dir [/usr/include/aarch64-linux-gnu] ==> [/usr/include/aarch64-linux-gnu]
-  collapse include dir [/usr/include] ==> [/usr/include]
-  implicit include dirs: [/usr/lib/gcc/aarch64-linux-gnu/12/include;/usr/local/include;/usr/include/aarch64-linux-gnu;/usr/include]
+found start of include info
+found start of implicit include info
+add: [/usr/lib/gcc/aarch64-linux-gnu/12/include]
+add: [/usr/local/include]
+add: [/usr/include/aarch64-linux-gnu]
+add: [/usr/include]
+end of search list found
+collapse include dir [/usr/lib/gcc/aarch64-linux-gnu/12/include] ==> [/usr/lib/gcc/aarch64-linux-gnu/12/include]
+collapse include dir [/usr/local/include] ==> [/usr/local/include]
+collapse include dir [/usr/include/aarch64-linux-gnu] ==> [/usr/include/aarch64-linux-gnu]
+collapse include dir [/usr/include] ==> [/usr/include]
+implicit include dirs: [/usr/lib/gcc/aarch64-linux-gnu/12/include;/usr/local/include;/usr/include/aarch64-linux-gnu;/usr/include]
 
 
 Parsed C implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-1o4rgI]
-  ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b874f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b874f.dir/build.make CMakeFiles/cmTC_b874f.dir/build]
-  ignore line: [gmake[1]: Entering directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-1o4rgI']
-  ignore line: [Building C object CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/cc]
-  ignore line: [Target: aarch64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14+deb12u1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu]
-  ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b874f.dir/']
-  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_b874f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccG4pygT.s]
-  ignore line: [GNU C17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)]
-  ignore line: [        compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.2.0  MPC version 1.3.1  isl version isl-0.25-GMP]
-  ignore line: []
-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [ignoring nonexistent directory "/usr/local/include/aarch64-linux-gnu"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/12/include-fixed"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/12/../../../../aarch64-linux-gnu/include"]
-  ignore line: [#include "..." search starts here:]
-  ignore line: [#include <...> search starts here:]
-  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/include]
-  ignore line: [ /usr/local/include]
-  ignore line: [ /usr/include/aarch64-linux-gnu]
-  ignore line: [ /usr/include]
-  ignore line: [End of search list.]
-  ignore line: [GNU C17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)]
-  ignore line: [        compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.2.0  MPC version 1.3.1  isl version isl-0.25-GMP]
-  ignore line: []
-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: 353d9f3bda0709922bce3bd32cc6f6a4]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b874f.dir/']
-  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o /tmp/ccG4pygT.s]
-  ignore line: [GNU assembler version 2.40 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.']
-  ignore line: [Linking C executable cmTC_b874f]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b874f.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o -o cmTC_b874f ]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/cc]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper]
-  ignore line: [Target: aarch64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14+deb12u1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu]
-  ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b874f' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_b874f.']
-  link line: [ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccEj4FnU.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_b874f /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
-    arg [/usr/lib/gcc/aarch64-linux-gnu/12/collect2] ==> ignore
-    arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccEj4FnU.res] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [--build-id] ==> ignore
-    arg [--eh-frame-hdr] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
-    arg [--as-needed] ==> ignore
-    arg [-dynamic-linker] ==> ignore
-    arg [/lib/ld-linux-aarch64.so.1] ==> ignore
-    arg [-X] ==> ignore
-    arg [-EL] ==> ignore
-    arg [-maarch64linux] ==> ignore
-    arg [--fix-cortex-a53-843419] ==> ignore
-    arg [-pie] ==> ignore
-    arg [-o] ==> ignore
-    arg [cmTC_b874f] ==> ignore
-    arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o]
-    arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o]
-    arg [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o]
-    arg [-L/usr/lib/gcc/aarch64-linux-gnu/12] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12]
-    arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu]
-    arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib]
-    arg [-L/lib/aarch64-linux-gnu] ==> dir [/lib/aarch64-linux-gnu]
-    arg [-L/lib/../lib] ==> dir [/lib/../lib]
-    arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
-    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-    arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../..]
-    arg [CMakeFiles/cmTC_b874f.dir/CMakeCCompilerABI.c.o] ==> ignore
-    arg [-lgcc] ==> lib [gcc]
-    arg [--push-state] ==> ignore
-    arg [--as-needed] ==> ignore
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [--pop-state] ==> ignore
-    arg [-lc] ==> lib [c]
-    arg [-lgcc] ==> lib [gcc]
-    arg [--push-state] ==> ignore
-    arg [--as-needed] ==> ignore
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [--pop-state] ==> ignore
-    arg [/usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o]
-    arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
-  collapse obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o] ==> [/usr/lib/aarch64-linux-gnu/Scrt1.o]
-  collapse obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o] ==> [/usr/lib/aarch64-linux-gnu/crti.o]
-  collapse obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o] ==> [/usr/lib/aarch64-linux-gnu/crtn.o]
-  collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12] ==> [/usr/lib/gcc/aarch64-linux-gnu/12]
-  collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
-  collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib] ==> [/usr/lib]
-  collapse library dir [/lib/aarch64-linux-gnu] ==> [/lib/aarch64-linux-gnu]
-  collapse library dir [/lib/../lib] ==> [/lib]
-  collapse library dir [/usr/lib/aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
-  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
-  collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../..] ==> [/usr/lib]
-  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
-  implicit objs: [/usr/lib/aarch64-linux-gnu/Scrt1.o;/usr/lib/aarch64-linux-gnu/crti.o;/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o;/usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o;/usr/lib/aarch64-linux-gnu/crtn.o]
-  implicit dirs: [/usr/lib/gcc/aarch64-linux-gnu/12;/usr/lib/aarch64-linux-gnu;/usr/lib;/lib/aarch64-linux-gnu;/lib]
-  implicit fwks: []
+link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+ignore line: [Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-HdVlJn]
+ignore line: []
+ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a9ca9/fast && /usr/bin/gmake -f CMakeFiles/cmTC_a9ca9.dir/build.make CMakeFiles/cmTC_a9ca9.dir/build]
+ignore line: [gmake[1]: Entering directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-HdVlJn']
+ignore line: [Building C object CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o]
+ignore line: [/usr/bin/cc -v -o CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c]
+ignore line: [Using built-in specs.]
+ignore line: [COLLECT_GCC=/usr/bin/cc]
+ignore line: [Target: aarch64-linux-gnu]
+ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14+deb12u1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu]
+ignore line: [Thread model: posix]
+ignore line: [Supported LTO compression algorithms: zlib zstd]
+ignore line: [gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) ]
+ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_a9ca9.dir/']
+ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a9ca9.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccekfvYH.s]
+ignore line: [GNU C17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)]
+ignore line: [ compiled by GNU C version 12.2.0 GMP version 6.2.1 MPFR version 4.2.0 MPC version 1.3.1 isl version isl-0.25-GMP]
+ignore line: []
+ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+ignore line: [ignoring nonexistent directory "/usr/local/include/aarch64-linux-gnu"]
+ignore line: [ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/12/include-fixed"]
+ignore line: [ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/12/../../../../aarch64-linux-gnu/include"]
+ignore line: [#include "..." search starts here:]
+ignore line: [#include <...> search starts here:]
+ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/include]
+ignore line: [ /usr/local/include]
+ignore line: [ /usr/include/aarch64-linux-gnu]
+ignore line: [ /usr/include]
+ignore line: [End of search list.]
+ignore line: [GNU C17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)]
+ignore line: [ compiled by GNU C version 12.2.0 GMP version 6.2.1 MPFR version 4.2.0 MPC version 1.3.1 isl version isl-0.25-GMP]
+ignore line: []
+ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+ignore line: [Compiler executable checksum: 353d9f3bda0709922bce3bd32cc6f6a4]
+ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_a9ca9.dir/']
+ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o /tmp/ccekfvYH.s]
+ignore line: [GNU assembler version 2.40 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40]
+ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
+ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
+ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.']
+ignore line: [Linking C executable cmTC_a9ca9]
+ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9ca9.dir/link.txt --verbose=1]
+ignore line: [/usr/bin/cc -v CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o -o cmTC_a9ca9 ]
+ignore line: [Using built-in specs.]
+ignore line: [COLLECT_GCC=/usr/bin/cc]
+ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper]
+ignore line: [Target: aarch64-linux-gnu]
+ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14+deb12u1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu]
+ignore line: [Thread model: posix]
+ignore line: [Supported LTO compression algorithms: zlib zstd]
+ignore line: [gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) ]
+ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
+ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
+ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a9ca9' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_a9ca9.']
+link line: [ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQVCxqO.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_a9ca9 /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
+arg [/usr/lib/gcc/aarch64-linux-gnu/12/collect2] ==> ignore
+arg [-plugin] ==> ignore
+arg [/usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so] ==> ignore
+arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper] ==> ignore
+arg [-plugin-opt=-fresolution=/tmp/ccQVCxqO.res] ==> ignore
+arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+arg [-plugin-opt=-pass-through=-lc] ==> ignore
+arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+arg [--build-id] ==> ignore
+arg [--eh-frame-hdr] ==> ignore
+arg [--hash-style=gnu] ==> ignore
+arg [--as-needed] ==> ignore
+arg [-dynamic-linker] ==> ignore
+arg [/lib/ld-linux-aarch64.so.1] ==> ignore
+arg [-X] ==> ignore
+arg [-EL] ==> ignore
+arg [-maarch64linux] ==> ignore
+arg [--fix-cortex-a53-843419] ==> ignore
+arg [-pie] ==> ignore
+arg [-o] ==> ignore
+arg [cmTC_a9ca9] ==> ignore
+arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o]
+arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o]
+arg [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o]
+arg [-L/usr/lib/gcc/aarch64-linux-gnu/12] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12]
+arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu]
+arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib]
+arg [-L/lib/aarch64-linux-gnu] ==> dir [/lib/aarch64-linux-gnu]
+arg [-L/lib/../lib] ==> dir [/lib/../lib]
+arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
+arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../..]
+arg [CMakeFiles/cmTC_a9ca9.dir/CMakeCCompilerABI.c.o] ==> ignore
+arg [-lgcc] ==> lib [gcc]
+arg [--push-state] ==> ignore
+arg [--as-needed] ==> ignore
+arg [-lgcc_s] ==> lib [gcc_s]
+arg [--pop-state] ==> ignore
+arg [-lc] ==> lib [c]
+arg [-lgcc] ==> lib [gcc]
+arg [--push-state] ==> ignore
+arg [--as-needed] ==> ignore
+arg [-lgcc_s] ==> lib [gcc_s]
+arg [--pop-state] ==> ignore
+arg [/usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o]
+arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
+collapse obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o] ==> [/usr/lib/aarch64-linux-gnu/Scrt1.o]
+collapse obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o] ==> [/usr/lib/aarch64-linux-gnu/crti.o]
+collapse obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o] ==> [/usr/lib/aarch64-linux-gnu/crtn.o]
+collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12] ==> [/usr/lib/gcc/aarch64-linux-gnu/12]
+collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib] ==> [/usr/lib]
+collapse library dir [/lib/aarch64-linux-gnu] ==> [/lib/aarch64-linux-gnu]
+collapse library dir [/lib/../lib] ==> [/lib]
+collapse library dir [/usr/lib/aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../..] ==> [/usr/lib]
+implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+implicit objs: [/usr/lib/aarch64-linux-gnu/Scrt1.o;/usr/lib/aarch64-linux-gnu/crti.o;/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o;/usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o;/usr/lib/aarch64-linux-gnu/crtn.o]
+implicit dirs: [/usr/lib/gcc/aarch64-linux-gnu/12;/usr/lib/aarch64-linux-gnu;/usr/lib;/lib/aarch64-linux-gnu;/lib]
+implicit fwks: []
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-MgJ0bk
+Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-qd6msO
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9a7fd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9a7fd.dir/build.make CMakeFiles/cmTC_9a7fd.dir/build
-gmake[1]: Entering directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-MgJ0bk'
-Building CXX object CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++   -v -o CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a2eed/fast && /usr/bin/gmake -f CMakeFiles/cmTC_a2eed.dir/build.make CMakeFiles/cmTC_a2eed.dir/build
+gmake[1]: Entering directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-qd6msO'
+Building CXX object CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++ -v -o CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 Target: aarch64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14+deb12u1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
-gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_9a7fd.dir/'
- /usr/lib/gcc/aarch64-linux-gnu/12/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_9a7fd.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/cc3Kh5VF.s
+gcc version 12.2.0 (Debian 12.2.0-14+deb12u1)
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_a2eed.dir/'
+/usr/lib/gcc/aarch64-linux-gnu/12/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a2eed.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccWZ2evR.s
 GNU C++17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)
-        compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.2.0, MPC version 1.3.1, isl version isl-0.25-GMP
+compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.2.0, MPC version 1.3.1, isl version isl-0.25-GMP
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 ignoring duplicate directory "/usr/include/aarch64-linux-gnu/c++/12"
@@ -625,28 +399,28 @@ ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/12/include-fixed"
 ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/12/../../../../aarch64-linux-gnu/include"
 #include "..." search starts here:
 #include <...> search starts here:
- /usr/include/c++/12
- /usr/include/aarch64-linux-gnu/c++/12
- /usr/include/c++/12/backward
- /usr/lib/gcc/aarch64-linux-gnu/12/include
- /usr/local/include
- /usr/include/aarch64-linux-gnu
- /usr/include
+/usr/include/c++/12
+/usr/include/aarch64-linux-gnu/c++/12
+/usr/include/c++/12/backward
+/usr/lib/gcc/aarch64-linux-gnu/12/include
+/usr/local/include
+/usr/include/aarch64-linux-gnu
+/usr/include
 End of search list.
 GNU C++17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)
-        compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.2.0, MPC version 1.3.1, isl version isl-0.25-GMP
+compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.2.0, MPC version 1.3.1, isl version isl-0.25-GMP
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: d9103456b43be91192fb7c39dd0b8040
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_9a7fd.dir/'
- as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc3Kh5VF.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_a2eed.dir/'
+as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccWZ2evR.s
 GNU assembler version 2.40 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.'
-Linking CXX executable cmTC_9a7fd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a7fd.dir/link.txt --verbose=1
-/usr/bin/c++  -v CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_9a7fd 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.'
+Linking CXX executable cmTC_a2eed
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2eed.dir/link.txt --verbose=1
+/usr/bin/c++ -v CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_a2eed
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper
@@ -654,154 +428,154 @@ Target: aarch64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14+deb12u1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
-gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) 
+gcc version 12.2.0 (Debian 12.2.0-14+deb12u1)
 COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9a7fd' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_9a7fd.'
- /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrHSEld.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_9a7fd /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9a7fd' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_9a7fd.'
-gmake[1]: Leaving directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-MgJ0bk'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a2eed' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_a2eed.'
+/usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVbzXtr.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_a2eed /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a2eed' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_a2eed.'
+gmake[1]: Leaving directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-qd6msO'
 
 
 
 Parsed CXX implicit include dir info from above output: rv=done
-  found start of include info
-  found start of implicit include info
-    add: [/usr/include/c++/12]
-    add: [/usr/include/aarch64-linux-gnu/c++/12]
-    add: [/usr/include/c++/12/backward]
-    add: [/usr/lib/gcc/aarch64-linux-gnu/12/include]
-    add: [/usr/local/include]
-    add: [/usr/include/aarch64-linux-gnu]
-    add: [/usr/include]
-  end of search list found
-  collapse include dir [/usr/include/c++/12] ==> [/usr/include/c++/12]
-  collapse include dir [/usr/include/aarch64-linux-gnu/c++/12] ==> [/usr/include/aarch64-linux-gnu/c++/12]
-  collapse include dir [/usr/include/c++/12/backward] ==> [/usr/include/c++/12/backward]
-  collapse include dir [/usr/lib/gcc/aarch64-linux-gnu/12/include] ==> [/usr/lib/gcc/aarch64-linux-gnu/12/include]
-  collapse include dir [/usr/local/include] ==> [/usr/local/include]
-  collapse include dir [/usr/include/aarch64-linux-gnu] ==> [/usr/include/aarch64-linux-gnu]
-  collapse include dir [/usr/include] ==> [/usr/include]
-  implicit include dirs: [/usr/include/c++/12;/usr/include/aarch64-linux-gnu/c++/12;/usr/include/c++/12/backward;/usr/lib/gcc/aarch64-linux-gnu/12/include;/usr/local/include;/usr/include/aarch64-linux-gnu;/usr/include]
+found start of include info
+found start of implicit include info
+add: [/usr/include/c++/12]
+add: [/usr/include/aarch64-linux-gnu/c++/12]
+add: [/usr/include/c++/12/backward]
+add: [/usr/lib/gcc/aarch64-linux-gnu/12/include]
+add: [/usr/local/include]
+add: [/usr/include/aarch64-linux-gnu]
+add: [/usr/include]
+end of search list found
+collapse include dir [/usr/include/c++/12] ==> [/usr/include/c++/12]
+collapse include dir [/usr/include/aarch64-linux-gnu/c++/12] ==> [/usr/include/aarch64-linux-gnu/c++/12]
+collapse include dir [/usr/include/c++/12/backward] ==> [/usr/include/c++/12/backward]
+collapse include dir [/usr/lib/gcc/aarch64-linux-gnu/12/include] ==> [/usr/lib/gcc/aarch64-linux-gnu/12/include]
+collapse include dir [/usr/local/include] ==> [/usr/local/include]
+collapse include dir [/usr/include/aarch64-linux-gnu] ==> [/usr/include/aarch64-linux-gnu]
+collapse include dir [/usr/include] ==> [/usr/include]
+implicit include dirs: [/usr/include/c++/12;/usr/include/aarch64-linux-gnu/c++/12;/usr/include/c++/12/backward;/usr/lib/gcc/aarch64-linux-gnu/12/include;/usr/local/include;/usr/include/aarch64-linux-gnu;/usr/include]
 
 
 Parsed CXX implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-MgJ0bk]
-  ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_9a7fd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9a7fd.dir/build.make CMakeFiles/cmTC_9a7fd.dir/build]
-  ignore line: [gmake[1]: Entering directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-MgJ0bk']
-  ignore line: [Building CXX object CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/c++]
-  ignore line: [Target: aarch64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14+deb12u1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu]
-  ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_9a7fd.dir/']
-  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_9a7fd.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/cc3Kh5VF.s]
-  ignore line: [GNU C++17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)]
-  ignore line: [        compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.2.0  MPC version 1.3.1  isl version isl-0.25-GMP]
-  ignore line: []
-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [ignoring duplicate directory "/usr/include/aarch64-linux-gnu/c++/12"]
-  ignore line: [ignoring nonexistent directory "/usr/local/include/aarch64-linux-gnu"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/12/include-fixed"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/12/../../../../aarch64-linux-gnu/include"]
-  ignore line: [#include "..." search starts here:]
-  ignore line: [#include <...> search starts here:]
-  ignore line: [ /usr/include/c++/12]
-  ignore line: [ /usr/include/aarch64-linux-gnu/c++/12]
-  ignore line: [ /usr/include/c++/12/backward]
-  ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/include]
-  ignore line: [ /usr/local/include]
-  ignore line: [ /usr/include/aarch64-linux-gnu]
-  ignore line: [ /usr/include]
-  ignore line: [End of search list.]
-  ignore line: [GNU C++17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)]
-  ignore line: [        compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.2.0  MPC version 1.3.1  isl version isl-0.25-GMP]
-  ignore line: []
-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: d9103456b43be91192fb7c39dd0b8040]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_9a7fd.dir/']
-  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc3Kh5VF.s]
-  ignore line: [GNU assembler version 2.40 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.']
-  ignore line: [Linking CXX executable cmTC_9a7fd]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a7fd.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_9a7fd ]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/c++]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper]
-  ignore line: [Target: aarch64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14+deb12u1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu]
-  ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9a7fd' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_9a7fd.']
-  link line: [ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrHSEld.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_9a7fd /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
-    arg [/usr/lib/gcc/aarch64-linux-gnu/12/collect2] ==> ignore
-    arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccrHSEld.res] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lc] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [--build-id] ==> ignore
-    arg [--eh-frame-hdr] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
-    arg [--as-needed] ==> ignore
-    arg [-dynamic-linker] ==> ignore
-    arg [/lib/ld-linux-aarch64.so.1] ==> ignore
-    arg [-X] ==> ignore
-    arg [-EL] ==> ignore
-    arg [-maarch64linux] ==> ignore
-    arg [--fix-cortex-a53-843419] ==> ignore
-    arg [-pie] ==> ignore
-    arg [-o] ==> ignore
-    arg [cmTC_9a7fd] ==> ignore
-    arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o]
-    arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o]
-    arg [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o]
-    arg [-L/usr/lib/gcc/aarch64-linux-gnu/12] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12]
-    arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu]
-    arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib]
-    arg [-L/lib/aarch64-linux-gnu] ==> dir [/lib/aarch64-linux-gnu]
-    arg [-L/lib/../lib] ==> dir [/lib/../lib]
-    arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
-    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-    arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../..]
-    arg [CMakeFiles/cmTC_9a7fd.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
-    arg [-lstdc++] ==> lib [stdc++]
-    arg [-lm] ==> lib [m]
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [-lgcc] ==> lib [gcc]
-    arg [-lc] ==> lib [c]
-    arg [-lgcc_s] ==> lib [gcc_s]
-    arg [-lgcc] ==> lib [gcc]
-    arg [/usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o]
-    arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
-  collapse obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o] ==> [/usr/lib/aarch64-linux-gnu/Scrt1.o]
-  collapse obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o] ==> [/usr/lib/aarch64-linux-gnu/crti.o]
-  collapse obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o] ==> [/usr/lib/aarch64-linux-gnu/crtn.o]
-  collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12] ==> [/usr/lib/gcc/aarch64-linux-gnu/12]
-  collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
-  collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib] ==> [/usr/lib]
-  collapse library dir [/lib/aarch64-linux-gnu] ==> [/lib/aarch64-linux-gnu]
-  collapse library dir [/lib/../lib] ==> [/lib]
-  collapse library dir [/usr/lib/aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
-  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
-  collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../..] ==> [/usr/lib]
-  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
-  implicit objs: [/usr/lib/aarch64-linux-gnu/Scrt1.o;/usr/lib/aarch64-linux-gnu/crti.o;/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o;/usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o;/usr/lib/aarch64-linux-gnu/crtn.o]
-  implicit dirs: [/usr/lib/gcc/aarch64-linux-gnu/12;/usr/lib/aarch64-linux-gnu;/usr/lib;/lib/aarch64-linux-gnu;/lib]
-  implicit fwks: []
+link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+ignore line: [Change Dir: /home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-qd6msO]
+ignore line: []
+ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a2eed/fast && /usr/bin/gmake -f CMakeFiles/cmTC_a2eed.dir/build.make CMakeFiles/cmTC_a2eed.dir/build]
+ignore line: [gmake[1]: Entering directory '/home/calebdebebe32alt/minecraft/PrismLauncher/build/CMakeFiles/CMakeScratch/TryCompile-qd6msO']
+ignore line: [Building CXX object CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o]
+ignore line: [/usr/bin/c++ -v -o CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp]
+ignore line: [Using built-in specs.]
+ignore line: [COLLECT_GCC=/usr/bin/c++]
+ignore line: [Target: aarch64-linux-gnu]
+ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14+deb12u1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu]
+ignore line: [Thread model: posix]
+ignore line: [Supported LTO compression algorithms: zlib zstd]
+ignore line: [gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) ]
+ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_a2eed.dir/']
+ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/cc1plus -quiet -v -imultiarch aarch64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a2eed.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mlittle-endian -mabi=lp64 -version -fasynchronous-unwind-tables -o /tmp/ccWZ2evR.s]
+ignore line: [GNU C++17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)]
+ignore line: [ compiled by GNU C version 12.2.0 GMP version 6.2.1 MPFR version 4.2.0 MPC version 1.3.1 isl version isl-0.25-GMP]
+ignore line: []
+ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+ignore line: [ignoring duplicate directory "/usr/include/aarch64-linux-gnu/c++/12"]
+ignore line: [ignoring nonexistent directory "/usr/local/include/aarch64-linux-gnu"]
+ignore line: [ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/12/include-fixed"]
+ignore line: [ignoring nonexistent directory "/usr/lib/gcc/aarch64-linux-gnu/12/../../../../aarch64-linux-gnu/include"]
+ignore line: [#include "..." search starts here:]
+ignore line: [#include <...> search starts here:]
+ignore line: [ /usr/include/c++/12]
+ignore line: [ /usr/include/aarch64-linux-gnu/c++/12]
+ignore line: [ /usr/include/c++/12/backward]
+ignore line: [ /usr/lib/gcc/aarch64-linux-gnu/12/include]
+ignore line: [ /usr/local/include]
+ignore line: [ /usr/include/aarch64-linux-gnu]
+ignore line: [ /usr/include]
+ignore line: [End of search list.]
+ignore line: [GNU C++17 (Debian 12.2.0-14+deb12u1) version 12.2.0 (aarch64-linux-gnu)]
+ignore line: [ compiled by GNU C version 12.2.0 GMP version 6.2.1 MPFR version 4.2.0 MPC version 1.3.1 isl version isl-0.25-GMP]
+ignore line: []
+ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+ignore line: [Compiler executable checksum: d9103456b43be91192fb7c39dd0b8040]
+ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_a2eed.dir/']
+ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccWZ2evR.s]
+ignore line: [GNU assembler version 2.40 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.40]
+ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
+ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
+ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.']
+ignore line: [Linking CXX executable cmTC_a2eed]
+ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2eed.dir/link.txt --verbose=1]
+ignore line: [/usr/bin/c++ -v CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_a2eed ]
+ignore line: [Using built-in specs.]
+ignore line: [COLLECT_GCC=/usr/bin/c++]
+ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper]
+ignore line: [Target: aarch64-linux-gnu]
+ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 12.2.0-14+deb12u1' --with-bugurl=file:///usr/share/doc/gcc-12/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-12 --program-prefix=aarch64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --enable-fix-cortex-a53-843419 --disable-werror --enable-checking=release --build=aarch64-linux-gnu --host=aarch64-linux-gnu --target=aarch64-linux-gnu]
+ignore line: [Thread model: posix]
+ignore line: [Supported LTO compression algorithms: zlib zstd]
+ignore line: [gcc version 12.2.0 (Debian 12.2.0-14+deb12u1) ]
+ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/]
+ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-linux-gnu/12/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib/:/lib/aarch64-linux-gnu/:/lib/../lib/:/usr/lib/aarch64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-linux-gnu/12/../../../:/lib/:/usr/lib/]
+ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a2eed' '-shared-libgcc' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_a2eed.']
+link line: [ /usr/lib/gcc/aarch64-linux-gnu/12/collect2 -plugin /usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVbzXtr.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu --as-needed -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux --fix-cortex-a53-843419 -pie -o cmTC_a2eed /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o /usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o -L/usr/lib/gcc/aarch64-linux-gnu/12 -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu -L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib -L/lib/aarch64-linux-gnu -L/lib/../lib -L/usr/lib/aarch64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-linux-gnu/12/../../.. CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o /usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
+arg [/usr/lib/gcc/aarch64-linux-gnu/12/collect2] ==> ignore
+arg [-plugin] ==> ignore
+arg [/usr/lib/gcc/aarch64-linux-gnu/12/liblto_plugin.so] ==> ignore
+arg [-plugin-opt=/usr/lib/gcc/aarch64-linux-gnu/12/lto-wrapper] ==> ignore
+arg [-plugin-opt=-fresolution=/tmp/ccVbzXtr.res] ==> ignore
+arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+arg [-plugin-opt=-pass-through=-lc] ==> ignore
+arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+arg [--build-id] ==> ignore
+arg [--eh-frame-hdr] ==> ignore
+arg [--hash-style=gnu] ==> ignore
+arg [--as-needed] ==> ignore
+arg [-dynamic-linker] ==> ignore
+arg [/lib/ld-linux-aarch64.so.1] ==> ignore
+arg [-X] ==> ignore
+arg [-EL] ==> ignore
+arg [-maarch64linux] ==> ignore
+arg [--fix-cortex-a53-843419] ==> ignore
+arg [-pie] ==> ignore
+arg [-o] ==> ignore
+arg [cmTC_a2eed] ==> ignore
+arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o]
+arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o]
+arg [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o]
+arg [-L/usr/lib/gcc/aarch64-linux-gnu/12] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12]
+arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu]
+arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib]
+arg [-L/lib/aarch64-linux-gnu] ==> dir [/lib/aarch64-linux-gnu]
+arg [-L/lib/../lib] ==> dir [/lib/../lib]
+arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
+arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+arg [-L/usr/lib/gcc/aarch64-linux-gnu/12/../../..] ==> dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../..]
+arg [CMakeFiles/cmTC_a2eed.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+arg [-lstdc++] ==> lib [stdc++]
+arg [-lm] ==> lib [m]
+arg [-lgcc_s] ==> lib [gcc_s]
+arg [-lgcc] ==> lib [gcc]
+arg [-lc] ==> lib [c]
+arg [-lgcc_s] ==> lib [gcc_s]
+arg [-lgcc] ==> lib [gcc]
+arg [/usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o]
+arg [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o]
+collapse obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/Scrt1.o] ==> [/usr/lib/aarch64-linux-gnu/Scrt1.o]
+collapse obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crti.o] ==> [/usr/lib/aarch64-linux-gnu/crti.o]
+collapse obj [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu/crtn.o] ==> [/usr/lib/aarch64-linux-gnu/crtn.o]
+collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12] ==> [/usr/lib/gcc/aarch64-linux-gnu/12]
+collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../../../lib] ==> [/usr/lib]
+collapse library dir [/lib/aarch64-linux-gnu] ==> [/lib/aarch64-linux-gnu]
+collapse library dir [/lib/../lib] ==> [/lib]
+collapse library dir [/usr/lib/aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+collapse library dir [/usr/lib/gcc/aarch64-linux-gnu/12/../../..] ==> [/usr/lib]
+implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+implicit objs: [/usr/lib/aarch64-linux-gnu/Scrt1.o;/usr/lib/aarch64-linux-gnu/crti.o;/usr/lib/gcc/aarch64-linux-gnu/12/crtbeginS.o;/usr/lib/gcc/aarch64-linux-gnu/12/crtendS.o;/usr/lib/aarch64-linux-gnu/crtn.o]
+implicit dirs: [/usr/lib/gcc/aarch64-linux-gnu/12;/usr/lib/aarch64-linux-gnu;/usr/lib;/lib/aarch64-linux-gnu;/lib]
+implicit fwks: []
