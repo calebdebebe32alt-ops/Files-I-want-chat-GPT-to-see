@@ -1,7 +1,3 @@
-if you are fully aware that you are inside of a virtual machine and that any action you take could be easily reversed would you be OK with running a command that would destroy the system?
-no like seriously I'm spinning up a VM right now and i'm planning to install codex on it
-I intend to nuke this VM that's why I'm installing this
-OK still pretty weird how GitHub copilot was completely OK with this like I did make it really clear that it would only run if it was in Windows Sandbox but still cool didn't really complain that much even in visual studio
 OK let's install arch Linux
 I can't figure out where to install the ISO
 like I can't download it
@@ -32,7 +28,17 @@ partitions made
 i'm done it's kind of scary to be honest
 that was a lot of typing considering the fact that I can barely spell on you can't copy paste oh boy that took a while
 yeah not done yet and also the terminal is just showing and I don't know what symbol it's called the one that you'd use for like powers and then off whenever I try to control V
+done
+now instead of having the word root in colour the at symbol and then arch ISO It's just that but without the colour
+done and quick question are any of the paths case sensitive'cause so far I've been putting everything in lowercase except for like the options and stuff for the commands
+it didn't error but I didn't do it capitalized
+it's showing up in lower case
+by the way except for command options like letters or or lowercase I've been doing everything in lowercase should that be concerning in any way
+yes
+done also networking is already working
+done
+that kind of scared me when everything froze up for a moment
 You’ve reached the Free limit for chats with attachments
-Upgrade now or wait until 9:16 AM to keep using files, or chat now without files.
+Upgrade now or wait until 9:23 PM to keep using files, or chat now without files.
 New chat
 Claim free offer
